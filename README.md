@@ -1,2 +1,2 @@
 # weconnect
-the placw where we connect
+the place where we connect
