@@ -10,7 +10,25 @@
 - difference between caret and tilde (^ and ~)
 
 
--initilise git 
+-initialise git 
 -.gitignore
 -create a remote repo on githib
 -push all code to remote origin
+-order of routes is important
+
+
+-Install postman app and make a workspace/colllection   >   Test API call
+-write logic to handle GET,POST,PATCH,DELETE Api calls ad test themm on POSTMAN
+-Explore routing ans use of ?,+,(),* in the routes
+-use of regex in routed /a/,/.*fly$/
+-Reading the query params in the routes
+-Reading the dynamic routes
+
+-Multiple route handlers-Play with the code
+-next()
+-next function and errors with res.send()
+-app.use("/route",rh,[rh2,rh3],rh4,rh5);
+-what kis a middleware
+-how express js basically handles requests behind the scenes
+-middlewares
+-difference between app.use amd app.all
