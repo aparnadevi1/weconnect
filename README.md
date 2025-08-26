@@ -32,3 +32,12 @@
 -how express js basically handles requests behind the scenes
 -middlewares
 -difference between app.use amd app.all
+-write a api for auth
+-error handling using app.use("/",(err,req,res,next))----(should be written at end)
+
+
+-create a free cluster on mongo atlas 
+-install mongoose
+-connect your application to the database   "connection-url/weconnect"
+-first connect to database then listen to server
+-create a user schema (create a model and export it)
