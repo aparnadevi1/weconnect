@@ -51,6 +51,33 @@ app.get("/feed",async(req,res)=>{
          res.status(400).send("Error getting the data"+err.message);
     }
 })
+app.patch("/user",async(req,res)=>
+{
+    const userId=req.body.userId;
+    const data=req.body;
+    try{
+       const user=await User.findByIdAndUpdate({_id:userId},data,{returnDocument:"after"});
+       res.send({message:"user updated successfully",user});
+
+    }
+    catch{
+       res.status(400).send("Error updating the data"+err.message);
+    }
+
+})
+app.delete("/user",async(req,res)=>{
+    
+   const userId=req.body.userId;
+   try{
+       const deleteduser=await User.findByIdAndDelete(userId);
+       res.send({message:"user deleted successfully",deleteduser});
+   }
+   catch(err)
+   {
+    res.status(400).send("Error deleting the user"+err.message);
+    }
+   
+})
 
 
 
