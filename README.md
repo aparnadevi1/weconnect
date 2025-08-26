@@ -41,3 +41,11 @@
 -connect your application to the database   "connection-url/weconnect"
 -first connect to database then listen to server
 -create a user schema (create a model and export it)
+
+
+-difference betweeen json object and JSON
+-express.json to understand datasend in json fromat
+-make your signup API to receive data from the end user and save it to the databse
+-user.findOne with duplicate eamilIds which one will it return
+-API-get user by email
+-API-get/feed-get all users from database
