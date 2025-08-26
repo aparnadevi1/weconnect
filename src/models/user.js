@@ -1,4 +1,5 @@
 const mongoose=require("mongoose");
+const validator=require("validator");
 const userSchema=new mongoose.Schema({
        firstName:{
         type:String,
@@ -14,8 +15,13 @@ const userSchema=new mongoose.Schema({
         lowercase:true,
         trim:true,
         required:true,
-        unique:true
-       },
+        unique:true,
+        validate(value){
+            if(!validator.isEmail(value))
+            {
+                throw new Error("Invalid email address"+value);
+            }
+       }},
        password:{
         type:String,
         required:true,
@@ -36,8 +42,14 @@ const userSchema=new mongoose.Schema({
        },
        photoUrl:{
         type:String,
-        default:"https://www.pinclipart.com/picdir/middle/541-5416602_chin-clipart.png"
-       },
+        default:"https://www.pinclipart.com/picdir/middle/541-5416602_chin-clipart.png",
+          validate(value){
+            if(!validator.isURL(value))
+            {
+                throw new Error("Invalid Photo Url"+value);
+            }
+       }},
+       
        about:{
         type:String,
         default:"This is a default about of the user!"
