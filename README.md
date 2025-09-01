@@ -49,3 +49,32 @@
 -user.findOne with duplicate eamilIds which one will it return
 -API-get user by email
 -API-get/feed-get all users from database
+
+
+-explore schems type options
+-add required,unique,min,minLength,trim
+-add default-create a custom validation function for gender
+-Improve the DB schema-PUT all approriate validation on each field in schema
+-Add timestamps to the userSchema
+-Add API leve validations on patch requests & signup post api
+-Data Sanitizing - Add API validation for each field
+-install validator
+-explore valisator library function and use validator functions for password,email,photoURL
+-never trust req.body
+
+-validate data in sign up api create util folder and do it there 
+-install bcrypt package
+-create passwordHash using bcypt.hash & save the user encrypted password
+-create login API
+-Compare passwords and throw errors if email or password is invalid
+
+-install cookie-parser
+-create a dummy cookie,send a cookie 
+-create a jwt token send it to user in cookie
+-read the cookie and find the user
+-add userAuth middleware in profile api 
+-set the expiry of jwt token and cookies
+
+
+
+

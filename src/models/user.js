@@ -1,5 +1,7 @@
 const mongoose=require("mongoose");
 const validator=require("validator");
+const jwt=require("jsonwebtoken");
+const bcrypt=require("bcrypt");
 const userSchema=new mongoose.Schema({
        firstName:{
         type:String,
@@ -59,5 +61,22 @@ const userSchema=new mongoose.Schema({
        }
 
 },{timestamps:true});
+userSchema.methods.getJWT=async function()
+{
+    const user=this;
+    const token=jwt.sign({_id:user._id},"secretkeypasswordonlyserverknows",{
+            expiresIn:"7d"
+        });
+        return token;
+
+}
+userSchema.methods.validatePassword=async function(passwordInputByUser)
+{
+    const user=this;
+    const passwordHash=this.password;
+    const isPasswordValid=await bcrypt.compare(passwordInputByUser,passwordHash);
+    return isPasswordValid;
+}
 const User=mongoose.model("User",userSchema);
 module.exports=User;
+//user schema methods-if they are closely related to scema offload it to here
