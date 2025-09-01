@@ -74,7 +74,9 @@
 -read the cookie and find the user
 -add userAuth middleware in profile api 
 -set the expiry of jwt token and cookies
+-create user schema methods to getJwt and compare passwords
 
 
-
+-logically categorise routes under resopective routers and what apis to made
+-create routers using express router and import them in app.js
 
