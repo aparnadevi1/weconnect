@@ -80,3 +80,16 @@
 -logically categorise routes under resopective routers and what apis to made
 -create routers using express router and import them in app.js
 
+
+-create connectionrequest schema
+-send connection request api
+-proper validation of data
+-think about all corner cases
+-$or $and  and $not  query in mongooose
+-schema.pre("save",fuction(){}) function
+-compound indexes
+-read more on indexes,why needeed,advantages,disadvantges
+
+-write code with proper validations for review api
+-ref and populate
+-create connections and receivedrequesta api
