@@ -17,7 +17,7 @@ const userSchema=new mongoose.Schema({
         lowercase:true,
         trim:true,
         required:true,
-        unique:true,
+        unique:true,//will make emailId as an Index
         validate(value){
             if(!validator.isEmail(value))
             {
@@ -35,6 +35,10 @@ const userSchema=new mongoose.Schema({
        },
        gender:{
         type:String,
+        enum:{
+            values:["male","female","others"],
+            message:'{value} is not valid gnder'
+        },
         validate(value){
             if(!["male","female", "others"].includes(value))
             {
