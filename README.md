@@ -93,3 +93,5 @@
 -write code with proper validations for review api
 -ref and populate
 -create connections and receivedrequesta api
+
+-create feed api and read about nin and ne and other queries
